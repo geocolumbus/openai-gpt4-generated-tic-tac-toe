@@ -1,1 +1,5 @@
-Play tic tac toe from the command line. Written in python. Supports -h to return a help screen.
+Write a CLI Tic Tac Toe game.
+The output should draw a box around the board with even spacing for each line.
+The computer should play the "O" side and the user should play the "X" side.
+The user always goes first.
+

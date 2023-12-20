@@ -1,38 +1,31 @@
 from board import Board
 from player import Player
-from cli import print_board, print_winner, print_draw
+from computer import Computer
+from utils import check_win, check_draw
 
 class Game:
     def __init__(self):
         self.board = Board()
-        self.players = [Player('X'), Player('O')]
-        self.current_player_index = 0
+        self.player = Player('X')
+        self.computer = Computer('O')
+        self.current_turn = self.player
 
-    def start(self):
-        while not self.board.is_full() and not self.board.has_winner():
-            print_board(self.board)
-            self.make_move()
-            self.switch_player()
+    def switch_turn(self):
+        self.current_turn = self.computer if self.current_turn == self.player else self.player
 
-        print_board(self.board)
-        if self.board.has_winner():
-            print_winner(self.current_player())
-        else:
-            print_draw()
+    def play(self):
+        while True:
+            self.board.draw_board()
+            move = self.current_turn.get_move(self.board)
+            self.board.make_move(move, self.current_turn.symbol)
 
-    def make_move(self):
-        player = self.current_player()
-        move_made = False
-        while not move_made:
-            try:
-                move = player.get_move(self.board)
-                self.board.make_move(move, player.symbol)
-                move_made = True
-            except ValueError as e:
-                print(e)
+            if check_win(self.board, self.current_turn.symbol):
+                self.board.draw_board()
+                print(f"{self.current_turn.symbol} wins!")
+                break
+            elif check_draw(self.board):
+                self.board.draw_board()
+                print("It's a draw!")
+                break
 
-    def switch_player(self):
-        self.current_player_index = (self.current_player_index + 1) % len(self.players)
-
-    def current_player(self):
-        return self.players[self.current_player_index]
+            self.switch_turn()

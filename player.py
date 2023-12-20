@@ -3,5 +3,13 @@ class Player:
         self.symbol = symbol
 
     def get_move(self, board):
-        move = input(f"Player {self.symbol}, enter your move (row,col): ")
-        return tuple(map(int, move.strip().split(',')))
+        while True:
+            try:
+                move = input("Enter your move (row,col): ")
+                x, y = map(int, move.split(','))
+                if board.is_position_empty((x, y)):
+                    return x, y
+                else:
+                    print("This position is already taken.")
+            except (ValueError, IndexError):
+                print("Invalid move. Please enter row,col as two digits separated by a comma.")
