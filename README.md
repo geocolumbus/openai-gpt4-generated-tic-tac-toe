@@ -12,7 +12,10 @@ Play tic tac toe from the command line. Written in python. Supports -h to return
 
 Then I ran [gpt-engineer](https://github.com/gpt-engineer-org/gpt-engineer) and here is the output.
 
+```
 ❯ gpte tictactoe
+```
+
 Running gpt-engineer in /Users/georgecampbell/AI/gpt-engineer-projects/tictactoe 
 
 To create a command-line Tic Tac Toe game in Python, we will need several files to organize our code properly. Here's a list of the core classes and functions that we will implement:
@@ -164,7 +167,6 @@ requirements.txt
 
 This concludes the implementation of the command-line Tic Tac Toe game in Python. Each file contains the necessary code to run the game, and the `requirements.txt` file is present, although it is empty because we are only using the Python standard library. This concludes a fully working implementation.```sh
 python3 main.py
-```
 
 Total api cost: $  0.08363
 
@@ -231,4 +233,4 @@ X |   |
 Player O wins!
 ```
 
-It worked ok except `X` won, not `O` so it has that backwards.
+It worked ok except `X` won, not `O` so it has that backwards. Now I can ammend the prompt file to fix that, and to improve the output formatting, and rerun it. And so it goes from here...
