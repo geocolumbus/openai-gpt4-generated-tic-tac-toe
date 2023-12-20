@@ -1,0 +1,1 @@
+# This game does not have any external dependencies beyond the Python standard library.
