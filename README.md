@@ -1,3 +1,7 @@
+## GTP4 Created Tic Tac Toe Game
+
+This is a simple example of how to use [gpt-engineer](https://github.com/gpt-engineer-org/gpt-engineer) to create a CLI based Tic Tac Toe game.
+
 ## Creation
 
 ### Configure a folder and a prompt file
@@ -10,7 +14,7 @@ Play tic tac toe from the command line. Written in python. Supports -h to return
 
 ### Output from GPTE
 
-Then I ran [gpt-engineer](https://github.com/gpt-engineer-org/gpt-engineer) and here is the output.
+Then I ran the `gpte` command and here is the output.
 
 ```
 ❯ gpte tictactoe
