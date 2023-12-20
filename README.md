@@ -2,7 +2,7 @@
 
 ## Prompt Creation
 
-See the [prompt file](./prompt) file that described the project. GPT4 wrote all the code in this repo.
+See the [prompt file](./prompt) file that described the project. GPT4 wrote all the code in this repo - I only wrote the prompt file.
 
 See [GPT Engineer](https://github.com/gpt-engineer-org/gpt-engineer) for more on how to do this.
 
